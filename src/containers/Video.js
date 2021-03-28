@@ -7,7 +7,6 @@ export default function VideoContainer() {
   let videoIdOrSignedUrl = id;
   return (
     <div>
-      <h3>ID: {id}</h3>
       <Stream controls src={videoIdOrSignedUrl} />
     </div>
   );

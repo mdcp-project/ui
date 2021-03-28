@@ -5,14 +5,10 @@ import { useHistory, useLocation } from "react-router-dom";
 
 import { useAppContext } from "../libs/Context";
 import { login } from "../libs/Auth";
-import "./Login.css";
+import "./Register.css";
 import axios from "axios";
 
-function useQuery() {
-  return new URLSearchParams(useLocation().search);
-}
-
-export default function Login() {
+export default function Register() {
   const { userHasAuthenticated } = useAppContext();
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
@@ -23,10 +19,10 @@ export default function Login() {
     return email.length > 0 && password.length > 0;
   }
 
-  function handleLogin(tokens) {
+  function handleRegister(tokens) {
     login(tokens);
     userHasAuthenticated(true);
-    console.log("Success login");
+    console.log("Success regioster");
     console.log(nextPage);
     history.push(nextPage || '/');
   }
@@ -34,16 +30,16 @@ export default function Login() {
   function handleSubmit(event) {
     event.preventDefault();
     axios
-      .post("/api/signin", {
+      .post("/api/signup", {
         email: email,
         password: password,
       })
-      .then((r) => handleLogin(r.data))
+      .then((r) => handleRegister(r.data))
       .catch((error) => console.log(error));
   }
 
   return (
-    <div className="Login">
+    <div className="Register">
       <Form onSubmit={handleSubmit}>
         <Form.Group size="lg" controlId="email">
           <Form.Label>Email</Form.Label>
@@ -63,7 +59,7 @@ export default function Login() {
           />
         </Form.Group>
         <Button block size="lg" type="submit" disabled={!validateForm()}>
-          Login
+          Signup
         </Button>
       </Form>
     </div>

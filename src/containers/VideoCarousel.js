@@ -14,42 +14,17 @@ export default function VideoCarousel() {
   let videos = [];
   videos.push(
     <Carousel.Item>
-      <VideoPreview url="1"></VideoPreview>
+      <VideoPreview id="7c86df8951f69849f9caeb0981f33ec4" title="Rick Astley - Never Gonna Give You Up"></VideoPreview>
     </Carousel.Item>
   );
   videos.push(
     <Carousel.Item>
-      <VideoPreview url="1"></VideoPreview>
+      <VideoPreview id="321cd67561491ab6d7b33c6c4c606daa" title="Polish Cow"></VideoPreview>
     </Carousel.Item>
   );
   videos.push(
     <Carousel.Item>
-      <VideoPreview url="1"></VideoPreview>
-    </Carousel.Item>
-  );
-  videos.push(
-    <Carousel.Item>
-      <VideoPreview url="1"></VideoPreview>
-    </Carousel.Item>
-  );
-  videos.push(
-    <Carousel.Item>
-      <VideoPreview url="1"></VideoPreview>
-    </Carousel.Item>
-  );
-  videos.push(
-    <Carousel.Item>
-      <VideoPreview url="1"></VideoPreview>
-    </Carousel.Item>
-  );
-  videos.push(
-    <Carousel.Item>
-      <VideoPreview url="1"></VideoPreview>
-    </Carousel.Item>
-  );
-  videos.push(
-    <Carousel.Item>
-      <VideoPreview url="1"></VideoPreview>
+      <VideoPreview id="fefecb3cf708c2263e7ffa782a447c73" title="DOTA Dragon Blood Official Trailer"></VideoPreview>
     </Carousel.Item>
   );
 
